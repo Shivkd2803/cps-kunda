@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="description"
+    content="Children Paradise School - Nurturing young minds since 1995. Quality education for Classes Pre-Primary to 10.">
+  <title>Children Paradise School</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ── SEARCH OVERLAY ──────────────────────────────────────── -->
+  <div id="searchOverlay">
+    <button class="search-close-btn" id="searchClose" aria-label="Close search">✕</button>
+    <div class="search-box">
+      <h2>Search the School</h2>
+      <div class="search-input-wrap">
+        <input type="text" id="searchInput" placeholder="Search notices, events, programmes…" autocomplete="off">
+        <button class="search-clear-btn" id="searchClear">✕</button>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+
+  <!-- ── NAVBAR ──────────────────────────────────────────────── -->
+  <nav id="navbar">
+    <a href="#home" class="logo" onclick="showPage('home')">
+      <div class="logo-img-wrap">
+        <img src="logo-cps.webp" alt="School Logo" class="logo-img">
+      </div>
+      <div class="logo-text-wrap">
+        <span class="logo-name">Children Paradise</span>
+        <span class="logo-sub">School · Est. 1995</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about" onclick="navTo('about')">About</a></li>
+      <li><a href="#programmes" onclick="navTo('programmes')">Programmes</a></li>
+      <li><a href="#gallery" onclick="navTo('gallery')">Gallery</a></li>
+      <li><a href="#notices" onclick="navTo('notices')">Notices</a></li>
+      <li><a href="#reviews" onclick="navTo('reviews')">Reviews</a></li>
+      <li><a href="#" onclick="showPage('results');return false;">Results</a></li>
+      <li><a href="#" onclick="showPage('fees');return false;">Fee Payment</a></li>
+      <li><a href="#admissions" onclick="navTo('admissions')">Admissions</a></li>
+      <li><a href="#" onclick="showPage('admin');return false;" class="nav-cta">Admin Portal</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="nav-search-btn" id="navSearchBtn" aria-label="Search">🔍 <span>Search</span></button>
+      <button class="nav-portal-btn" onclick="showPage('portal')" aria-label="Portal">👤 <span>Portal</span></button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <!-- PAGE: HOME                                                 -->
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <div class="page active" id="page-home">
+
+    <!-- ── TICKER ────────────────────────────────────────────── -->
+    <div class="ticker" style="margin-top:68px;">
+      <div class="ticker-inner" id="tickerInner"></div>
+    </div>
+
+    <!-- ── HERO ──────────────────────────────────────────────── -->
+    <section class="hero" id="home">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-tag">🌟 Est. 1995 · Where Every Child Shines</div>
+          <h1>Welcome to <em>Children's</em> Paradise</h1>
+          <p class="hero-desc">A joyful, nurturing school where young minds are inspired to learn, grow, and discover
+            their limitless potential — every single day.</p>
+          <div class="hero-btns">
+            <a href="#admissions" class="btn-primary" onclick="navTo('admissions')">📝 Apply for Admission</a>
+            <a href="#gallery" class="btn-outline" onclick="navTo('gallery')">View Gallery</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="circle-image">
+            <img src="r1-removebg-preview-removebg-preview.png" alt="School Image">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ABOUT ─────────────────────────────────────────────── -->
+    <section id="about">
+      <div class="about-grid">
+        <div class="reveal">
+          <div class="about-img-wrap">
+            <div class="about-img"><span class="about-img-text">CPS</span></div>
+            <div class="about-badge"><span class="num">#1</span><span class="lbl">Ranked School</span></div>
+          </div>
+        </div>
+        <div class="reveal">
+          <span class="section-tag">About Us</span>
+          <h2 class="section-title">A Paradise for Young Learners</h2>
+          <p style="font-size:15px;color:var(--gray);line-height:1.75;margin-bottom:4px;">Founded in 1995, Children
+            Paradise School has been a beacon of quality education built on love, creativity, and excellence. We cater
+            to students from Pre-Primary through Class 10.</p>
+          <ul class="values-list">
+            <li>
+              <div class="val-icon">🎯</div>
+              <div class="val-text"><strong>Academic Excellence</strong><span>Rigorous curriculum aligned with CBSE
+                  standards</span></div>
+            </li>
+            <li>
+              <div class="val-icon">🌱</div>
+              <div class="val-text"><strong>Holistic Development</strong><span>Sports, arts, and co-curriculars
+                  alongside academics</span></div>
+            </li>
+            <li>
+              <div class="val-icon">🤝</div>
+              <div class="val-text"><strong>Inclusive Community</strong><span>A safe, welcoming space for students of
+                  all backgrounds</span></div>
+            </li>
+            <li>
+              <div class="val-icon">💡</div>
+              <div class="val-text"><strong>Creative Thinking</strong><span>Project-based learning that sparks curiosity
+                  and innovation</span></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PROGRAMMES ────────────────────────────────────────── -->
+    <section id="programmes" style="background:var(--cream);">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <span class="section-tag">What We Offer</span>
+          <h2 class="section-title">Our Academic Programmes</h2>
+          <p class="section-desc">From early years to Class 10, every programme is designed to unlock potential.</p>
+        </div>
+        <div class="prog-grid">
+          <div class="prog-card reveal">
+            <div class="prog-icon">🌟</div>
+            <h3>Pre-Primary</h3>
+            <p>Play-based learning that builds foundational literacy, numeracy, and social skills.</p><span
+              class="prog-ages">Ages 3–5 · Nursery / LKG / UKG</span>
+          </div>
+          <div class="prog-card reveal">
+            <div class="prog-icon">📚</div>
+            <h3>Primary School</h3>
+            <p>Broad, balanced curriculum covering core subjects, languages, arts, and physical education.</p><span
+              class="prog-ages">Classes 1–5</span>
+          </div>
+          <div class="prog-card reveal">
+            <div class="prog-icon">🔬</div>
+            <h3>Middle School</h3>
+            <p>Deeper subject exploration with STEM focus, project-based learning, and student leadership.</p><span
+              class="prog-ages">Classes 6–8</span>
+          </div>
+          <div class="prog-card reveal">
+            <div class="prog-icon">🎓</div>
+            <h3>Secondary School</h3>
+            <p>Comprehensive preparation for Class 10 board exams with dedicated mentorship.</p><span
+              class="prog-ages">Classes 9–10</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── GALLERY ────────────────────────────────────────────── -->
+    <section id="gallery" style="background:var(--white);">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <span class="section-tag">School Life</span>
+          <h2 class="section-title">Life at Children Paradise</h2>
+          <p class="section-desc">A glimpse into the joyful, vibrant world of our school — classrooms, fields, and
+            stages.</p>
+        </div>
+        <div class="gallery-filters reveal">
+          <button class="gf-btn active" data-filter="all">All</button>
+          <button class="gf-btn" data-filter="classroom">Classroom</button>
+          <button class="gf-btn" data-filter="sports">Sports</button>
+          <button class="gf-btn" data-filter="events">Events</button>
+          <button class="gf-btn" data-filter="arts">Arts</button>
+        </div>
+        <div class="gallery-grid reveal">
+          <div class="gallery-item" data-cat="classroom" onclick="openLightbox(0)"><img
+              src="https://picsum.photos/seed/cps1/600/500" alt="Students in classroom" loading="lazy">
+            <div class="gallery-overlay"><span>Classroom Learning</span></div>
+          </div>
+          <div class="gallery-item gallery-item--tall" data-cat="events" onclick="openLightbox(1)"><img
+              src="https://picsum.photos/seed/cps2/600/800" alt="Annual Day" loading="lazy">
+            <div class="gallery-overlay"><span>Annual Day 2025</span></div>
+          </div>
+          <div class="gallery-item" data-cat="sports" onclick="openLightbox(2)"><img
+              src="https://picsum.photos/seed/cps3/600/500" alt="Sports day" loading="lazy">
+            <div class="gallery-overlay"><span>Sports Day</span></div>
+          </div>
+          <div class="gallery-item" data-cat="arts" onclick="openLightbox(3)"><img
+              src="https://picsum.photos/seed/cps4/600/500" alt="Art class" loading="lazy">
+            <div class="gallery-overlay"><span>Art & Craft</span></div>
+          </div>
+          <div class="gallery-item" data-cat="events" onclick="openLightbox(4)"><img
+              src="https://picsum.photos/seed/cps5/600/500" alt="Science exhibition" loading="lazy">
+            <div class="gallery-overlay"><span>Science Exhibition</span></div>
+          </div>
+          <div class="gallery-item" data-cat="sports" onclick="openLightbox(5)"><img
+              src="https://picsum.photos/seed/cps6/600/500" alt="Cricket match" loading="lazy">
+            <div class="gallery-overlay"><span>Cricket Match</span></div>
+          </div>
+          <div class="gallery-item" data-cat="classroom" onclick="openLightbox(6)"><img
+              src="https://picsum.photos/seed/cps7/600/500" alt="Library" loading="lazy">
+            <div class="gallery-overlay"><span>School Library</span></div>
+          </div>
+          <div class="gallery-item" data-cat="arts" onclick="openLightbox(7)"><img
+              src="https://picsum.photos/seed/cps8/600/500" alt="Music class" loading="lazy">
+            <div class="gallery-overlay"><span>Music Class</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── NOTICES ────────────────────────────────────────────── -->
+    <section id="notices" style="background:var(--navy);">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <span class="section-tag">Latest Updates</span>
+          <h2 class="section-title light">Notices & Announcements</h2>
+          <p class="section-desc light">Stay updated with the latest news, exam dates, and events.</p>
+        </div>
+        <div class="notices-grid" id="noticesGrid"></div>
+      </div>
+    </section>
+
+    <!-- ── REVIEWS ────────────────────────────────────────────── -->
+    <section id="reviews">
+      <div class="reviews-inner">
+        <div class="section-header reveal">
+          <span class="section-tag">Parent & Student Voices</span>
+          <h2 class="section-title">What Our Community Says</h2>
+          <p class="section-desc">Real experiences from parents, students, and alumni of Children Paradise School.</p>
+        </div>
+        <div class="reviews-grid" id="reviewsGrid"></div>
+        <!-- Add Review Form -->
+        <div class="add-review-box reveal">
+          <h3>Share Your Experience ✍️</h3>
+          <p style="font-size:13px;color:var(--gray);margin-bottom:18px;">We'd love to hear from parents, students, and
+            alumni.</p>
+          <div class="star-picker" id="starPicker">
+            <span data-val="1">★</span><span data-val="2">★</span><span data-val="3">★</span><span
+              data-val="4">★</span><span data-val="5">★</span>
+          </div>
+          <div id="starHidden" style="display:none;">0</div>
+          <form id="reviewForm">
+            <div class="form-row">
+              <div class="form-group"><label>Your Name *</label><input type="text" id="rv-name" placeholder="Full name"
+                  required></div>
+              <div class="form-group"><label>Role *</label><select id="rv-role">
+                  <option value="Parent">Parent</option>
+                  <option value="Student">Student</option>
+                  <option value="Alumni">Alumni</option>
+                </select></div>
+            </div>
+            <div class="form-group"><label>Class / Year</label><input type="text" id="rv-class"
+                placeholder="e.g. Class 5 or Alumni 2022"></div>
+            <div class="form-group"><label>Your Review *</label><textarea id="rv-text"
+                placeholder="Share your experience at Children Paradise School…" required></textarea></div>
+            <button type="submit" class="btn-primary" style="width:100%;justify-content:center;">Submit Review</button>
+            <div class="form-msg" id="reviewMsg">✓ Thank you for your review! It will appear shortly.</div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ADMISSIONS ──────────────────────────────────────────── -->
+    <section id="admissions" style="background:var(--white);">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <span class="section-tag">Join Us</span>
+          <h2 class="section-title">Admissions 2026–27</h2>
+          <p class="section-desc">Simple 4-step process to secure your child's seat at Children Paradise.</p>
+        </div>
+        <div class="steps-grid reveal">
+          <div class="step">
+            <div class="step-num">1</div>
+            <h4>Submit Enquiry</h4>
+            <p>Fill our online enquiry form with your child's details</p>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <h4>Document Check</h4>
+            <p>Submit birth certificate, previous report card & photos</p>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <h4>Interaction</h4>
+            <p>Brief interaction session with child and parents</p>
+          </div>
+          <div class="step">
+            <div class="step-num">4</div>
+            <h4>Confirmation</h4>
+            <p>Pay fees & collect your admission confirmation letter</p>
+          </div>
+        </div>
+        <div class="admission-form-wrap reveal">
+          <h3>Enquiry Form</h3>
+          <form id="admissionForm">
+            <div class="form-row">
+              <div class="form-group"><label>Parent / Guardian Name *</label><input type="text" placeholder="Full name"
+                  required></div>
+              <div class="form-group"><label>Child's Name *</label><input type="text" placeholder="Full name" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label>Phone Number *</label><input type="tel" placeholder="+91 98765 43210"
+                  required></div>
+              <div class="form-group"><label>Email Address</label><input type="email" placeholder="you@email.com"></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label>Class Applying For *</label>
+                <select required>
+                  <option value="" disabled selected>Select class</option>
+                  <option>Pre-Primary (Nursery)</option>
+                  <option>Pre-Primary (LKG)</option>
+                  <option>Pre-Primary (UKG)</option>
+                  <option>Class 1</option>
+                  <option>Class 2</option>
+                  <option>Class 3</option>
+                  <option>Class 4</option>
+                  <option>Class 5</option>
+                  <option>Class 6</option>
+                  <option>Class 7</option>
+                  <option>Class 8</option>
+                  <option>Class 9</option>
+                  <option>Class 10</option>
+                </select>
+              </div>
+              <div class="form-group"><label>Child's Date of Birth</label><input type="date"></div>
+            </div>
+            <div class="form-group"><label>Message (optional)</label><textarea
+                placeholder="Any additional questions…"></textarea></div>
+            <button type="submit" class="btn-primary" style="width:100%;justify-content:center;margin-top:4px;">Submit
+              Enquiry 📨</button>
+            <div class="form-msg" id="admFormMsg">✓ Thank you! We'll contact you within 2 working days.</div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CONTACT ─────────────────────────────────────────────── -->
+    <section id="contact">
+      <div class="contact-inner">
+        <div class="reveal">
+          <span class="section-tag">Get in Touch</span>
+          <h2 class="section-title">Contact Us</h2>
+          <p style="font-size:15px;color:var(--gray);line-height:1.7;margin-bottom:8px;">Reach us during school hours —
+            Monday to Saturday, 8am to 4pm.</p>
+          <ul class="contact-info-list">
+            <li>
+              <div class="ci-icon">📍</div>
+              <div>
+                <div class="ci-label">Address</div>
+                <div class="ci-value">14 Paradise Lane, Sector 7, New Delhi – 110002</div>
+              </div>
+            </li>
+            <li>
+              <div class="ci-icon">📞</div>
+              <div>
+                <div class="ci-label">Phone</div>
+                <div class="ci-value">+91 11 9876 5432</div>
+              </div>
+            </li>
+            <li>
+              <div class="ci-icon">✉️</div>
+              <div>
+                <div class="ci-label">Email</div>
+                <div class="ci-value">info@childrenparadiseschool.edu.in</div>
+              </div>
+            </li>
+            <li>
+              <div class="ci-icon">🕐</div>
+              <div>
+                <div class="ci-label">Office Hours</div>
+                <div class="ci-value">Mon – Sat, 8:00 AM – 4:00 PM</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="reveal">
+          <div class="map-placeholder">
+            <div style="text-align:center;color:rgba(255,255,255,0.3);">
+              <div style="font-size:52px;margin-bottom:12px;">🗺️</div>
+              <div style="font-size:14px;">Google Maps</div>
+              <div style="font-size:12px;margin-top:6px;max-width:220px;line-height:1.5;">Replace with &lt;iframe&gt;
+                from Google Maps</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FOOTER ──────────────────────────────────────────────── -->
+    <footer>
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="logo">
+            <div class="logo-shield"><span class="logo-initials">CP</span></div>
+            <div class="logo-text-wrap"><span class="logo-name" style="color:var(--white);">Children Paradise</span>
+            </div>
+          </div>
+          <p>Nurturing young minds since 1995. Joy, excellence, and compassion at the heart of everything we do.</p>
+        </div>
+        <div class="footer-links">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="#about" onclick="navTo('about')">About Us</a></li>
+            <li><a href="#programmes" onclick="navTo('programmes')">Programmes</a></li>
+            <li><a href="#gallery" onclick="navTo('gallery')">Gallery</a></li>
+            <li><a href="#notices" onclick="navTo('notices')">Notices</a></li>
+            <li><a href="#admissions" onclick="navTo('admissions')">Admissions</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h5>Portals</h5>
+          <ul>
+            <li><a href="#" onclick="showPage('fees');return false;">Fee Payment</a></li>
+            <li><a href="#" onclick="showPage('results');return false;">View Results</a></li>
+            <li><a href="#" onclick="showPage('portal');return false;">Parent Portal</a></li>
+            <li><a href="#" onclick="showPage('admin');return false;">Admin Portal</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h5>Connect</h5>
+          <ul>
+            <li><a href="#">📘 Facebook</a></li>
+            <li><a href="#">📸 Instagram</a></li>
+            <li><a href="#">▶️ YouTube</a></li>
+            <li><a href="#">💬 WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Children Paradise School. All rights reserved.</span>
+        <span>Designed with ❤️ for education</span>
+      </div>
+    </footer>
+
+  </div><!-- end page-home -->
+
+  <!-- ── LIGHTBOX ────────────────────────────────────────────── -->
+  <div id="lightbox">
+    <div class="lb-inner">
+      <img id="lbImg" src="" alt="">
+      <div id="lbCaption"></div>
+      <button class="lb-btn" id="lbPrev">‹</button>
+      <button class="lb-btn" id="lbNext">›</button>
+    </div>
+    <button id="lbClose">✕</button>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <!-- PAGE: FEE PAYMENT                                          -->
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <div class="page" id="page-fees">
+    <div class="fee-page">
+      <div class="fee-page-inner">
+        <button onclick="showPage('home')"
+          style="background:none;border:none;color:var(--gold);font-size:14px;cursor:pointer;margin-bottom:16px;display:flex;align-items:center;gap:6px;">←
+          Back to Home</button>
+        <h1>Online Fee Payment 💳</h1>
+        <p style="font-size:15px;color:var(--gray);margin-bottom:32px;">Secure, fast fee payments with instant receipt
+          generation.</p>
+        <div class="fee-grid">
+          <!-- Student Info -->
+          <div class="fee-card">
+            <h3>🎒 Student Details</h3>
+            <div class="form-group"><label>Student Name</label><input type="text" id="fee-student"
+                placeholder="Enter student name" value="Aarav Sharma"></div>
+            <div class="form-group"><label>Class & Section</label><select id="fee-class">
+                <option>Class 5 - A</option>
+                <option>Class 6 - B</option>
+                <option>Class 7 - A</option>
+                <option>Class 8 - C</option>
+                <option>Class 9 - B</option>
+                <option>Class 10 - A</option>
+              </select></div>
+            <div class="form-group"><label>Roll Number</label><input type="text" id="fee-roll" value="CPS-2025-0042"
+                placeholder="Roll number"></div>
+            <div class="form-group"><label>Fee Quarter</label><select id="fee-quarter">
+                <option>Q1 (April – June)</option>
+                <option>Q2 (July – Sept)</option>
+                <option selected>Q3 (Oct – Dec)</option>
+                <option>Q4 (Jan – Mar)</option>
+              </select></div>
+          </div>
+          <!-- Fee Summary -->
+          <div class="fee-card">
+            <h3>📋 Fee Summary</h3>
+            <table class="fee-summary-table">
+              <tr>
+                <td>Tuition Fee</td>
+                <td>₹12,000</td>
+              </tr>
+              <tr>
+                <td>Annual Charges</td>
+                <td>₹2,500</td>
+              </tr>
+              <tr>
+                <td>Sports Fee</td>
+                <td>₹800</td>
+              </tr>
+              <tr>
+                <td>Computer Lab Fee</td>
+                <td>₹600</td>
+              </tr>
+              <tr>
+                <td>Library Fee</td>
+                <td>₹400</td>
+              </tr>
+              <tr>
+                <td>Late Fine</td>
+                <td>₹0</td>
+              </tr>
+              <tr class="fee-total-row">
+                <td><strong>Total Payable</strong></td>
+                <td><strong>₹16,300</strong></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <!-- Payment Method -->
+        <div class="fee-card" style="margin-bottom:24px;">
+          <h3>💳 Select Payment Method</h3>
+          <div class="pay-methods" id="payMethods">
+            <div class="pay-method selected" data-pm="upi">
+              <div class="pm-icon">📱</div>
+              <div class="pm-label">UPI / GPay</div>
+            </div>
+            <div class="pay-method" data-pm="card">
+              <div class="pm-icon">💳</div>
+              <div class="pm-label">Credit / Debit Card</div>
+            </div>
+            <div class="pay-method" data-pm="netbanking">
+              <div class="pm-icon">🏦</div>
+              <div class="pm-label">Net Banking</div>
+            </div>
+            <div class="pay-method" data-pm="razorpay">
+              <div class="pm-icon">⚡</div>
+              <div class="pm-label">Razorpay</div>
+            </div>
+          </div>
+          <div id="upi-fields" style="margin-top:18px;">
+            <div class="form-group" style="max-width:340px;"><label>UPI ID</label><input type="text"
+                placeholder="yourname@upi" value="aarav.sharma@okhdfc"></div>
+          </div>
+          <button class="btn-primary" onclick="processPayment()"
+            style="margin-top:12px;min-width:200px;justify-content:center;">Pay ₹16,300 Securely 🔒</button>
+        </div>
+        <!-- Payment History -->
+        <div class="fee-card">
+          <h3>📜 Payment History</h3>
+          <div style="overflow-x:auto;">
+            <table class="payment-history-table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Quarter</th>
+                  <th>Amount</th>
+                  <th>Method</th>
+                  <th>Txn ID</th>
+                  <th>Status</th>
+                  <th>Receipt</th>
+                </tr>
+              </thead>
+              <tbody id="payHistoryBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <!-- PAGE: RESULTS                                              -->
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <div class="page" id="page-results">
+    <div class="results-page">
+      <div class="results-page-inner">
+        <button onclick="showPage('home')"
+          style="background:none;border:none;color:var(--gold);font-size:14px;cursor:pointer;margin-bottom:16px;display:flex;align-items:center;gap:6px;">←
+          Back to Home</button>
+        <h1
+          style="font-family:'Playfair Display',serif;font-size:34px;font-weight:900;color:var(--navy);margin-bottom:8px;">
+          Student Results 📊</h1>
+        <p style="font-size:15px;color:var(--gray);margin-bottom:28px;">Enter roll number or name to view your latest
+          exam results.</p>
+        <div class="result-search-bar">
+          <input type="text" id="resultSearch" placeholder="Enter roll number or student name…">
+          <select id="resultExam">
+            <option>Half Yearly Exam 2025</option>
+            <option>Annual Exam 2025</option>
+            <option>Unit Test 3 (Nov 2025)</option>
+            <option>Pre-Board 2026</option>
+          </select>
+          <button class="btn-primary" onclick="searchResult()" style="white-space:nowrap;">Search Results</button>
+        </div>
+        <div id="resultDisplay" style="display:none;">
+          <div class="result-card">
+            <div class="result-header">
+              <div class="result-info">
+                <h3 id="res-name">Aarav Sharma</h3>
+                <p id="res-meta">Class 9-B · Roll No. CPS-2025-0042 · Annual Exam 2025</p>
+              </div>
+              <div class="result-badge">
+                <span class="pct" id="res-pct">88.4%</span>
+                <span class="rank">Rank #3 in Class</span>
+              </div>
+            </div>
+            <table class="result-subjects">
+              <thead>
+                <tr>
+                  <th>Subject</th>
+                  <th>Max Marks</th>
+                  <th>Marks Obtained</th>
+                  <th>Grade</th>
+                  <th>Remarks</th>
+                </tr>
+              </thead>
+              <tbody id="resultTableBody"></tbody>
+            </table>
+            <div style="margin-top:20px;display:flex;gap:10px;flex-wrap:wrap;">
+              <button class="btn-primary" onclick="showToast('Result PDF downloading…')">📄 Download Result PDF</button>
+              <button class="btn-outline" onclick="showToast('Printing…');"
+                style="color:var(--navy);border-color:rgba(11,31,58,0.2);">🖨️ Print Result</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <!-- PAGE: ADMIN PORTAL                                         -->
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <div class="page" id="page-admin">
+    <div class="admin-page">
+      <div class="admin-page-inner">
+        <div
+          style="display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;flex-wrap:wrap;gap:12px;">
+          <div>
+            <button onclick="showPage('home')"
+              style="background:none;border:none;color:var(--gold);font-size:14px;cursor:pointer;margin-bottom:8px;display:flex;align-items:center;gap:6px;">←
+              Back to Home</button>
+            <h1 style="font-family:'Playfair Display',serif;font-size:32px;font-weight:900;color:var(--navy);">Admin
+              Dashboard</h1>
+          </div>
+          <div style="display:flex;gap:8px;">
+            <span
+              style="background:rgba(34,197,94,0.1);color:var(--green);padding:8px 16px;border-radius:8px;font-size:13px;font-weight:600;">●
+              Online</span>
+            <span
+              style="background:var(--light);color:var(--navy);padding:8px 16px;border-radius:8px;font-size:13px;">Admin
+              User</span>
+          </div>
+        </div>
+        <!-- Admin Tabs -->
+        <div class="admin-tabs">
+          <button class="admin-tab active" onclick="switchAdminTab('notices',this)">📋 Notices</button>
+          <button class="admin-tab" onclick="switchAdminTab('gallery-admin',this)">🖼️ Gallery</button>
+          <button class="admin-tab" onclick="switchAdminTab('results-admin',this)">📊 Results</button>
+          <button class="admin-tab" onclick="switchAdminTab('fees-admin',this)">💳 Fees</button>
+          <button class="admin-tab" onclick="switchAdminTab('stats',this)">📈 Stats</button>
+        </div>
+        <!-- NOTICES PANEL -->
+        <div class="admin-panel active" id="ap-notices">
+          <h2>Manage Notices</h2>
+          <div class="admin-card">
+            <h4 style="font-size:15px;font-weight:600;color:var(--navy);margin-bottom:16px;">➕ Add New Notice</h4>
+            <div class="form-row">
+              <div class="form-group"><label>Notice Title *</label><input type="text" id="adm-notice-title"
+                  placeholder="e.g. Parent-Teacher Meeting Schedule"></div>
+              <div class="form-group"><label>Date</label><input type="date" id="adm-notice-date"></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label>Category</label><select id="adm-notice-cat">
+                  <option value="event">Event</option>
+                  <option value="exam">Exam</option>
+                  <option value="holiday">Holiday</option>
+                  <option value="sport">Sport</option>
+                  <option value="result">Result</option>
+                </select></div>
+              <div class="form-group"><label>Priority</label><select id="adm-notice-priority">
+                  <option>Normal</option>
+                  <option>Important</option>
+                  <option>Urgent</option>
+                </select></div>
+            </div>
+            <div class="form-group"><label>Description</label><textarea id="adm-notice-desc"
+                placeholder="Detailed description of the notice…"></textarea></div>
+            <button class="btn-primary" onclick="addNotice()" style="min-width:160px;justify-content:center;">Publish
+              Notice 📢</button>
+          </div>
+          <div class="admin-card">
+            <h4 style="font-size:15px;font-weight:600;color:var(--navy);margin-bottom:16px;">📋 Current Notices</h4>
+            <div class="admin-notice-list" id="adminNoticeList"></div>
+          </div>
+        </div>
+        <!-- GALLERY PANEL -->
+        <div class="admin-panel" id="ap-gallery-admin">
+          <h2>Manage Gallery</h2>
+          <div class="admin-card">
+            <h4 style="font-size:15px;font-weight:600;color:var(--navy);margin-bottom:16px;">⬆️ Upload New Photos</h4>
+            <div class="form-row">
+              <div class="form-group"><label>Caption</label><input type="text" id="gal-caption"
+                  placeholder="e.g. Science Fair 2026"></div>
+              <div class="form-group"><label>Category</label><select id="gal-cat">
+                  <option value="classroom">Classroom</option>
+                  <option value="events">Events</option>
+                  <option value="sports">Sports</option>
+                  <option value="arts">Arts</option>
+                </select></div>
+            </div>
+            <div class="upload-zone" onclick="simulateUpload()">
+              <div class="uz-icon">🖼️</div>
+              <p>Click to upload photos or drag &amp; drop</p>
+              <span>JPG, PNG, WEBP — Max 5MB each</span>
+            </div>
+            <button class="btn-primary" onclick="addGalleryItem()"
+              style="margin-top:16px;min-width:160px;justify-content:center;">Add to Gallery</button>
+          </div>
+          <div class="admin-card">
+            <h4 style="font-size:15px;font-weight:600;color:var(--navy);margin-bottom:16px;">Current Gallery Items:
+              <span id="galCount">8</span>
+            </h4>
+            <p style="font-size:13px;color:var(--gray);">Gallery items can be managed by clicking Edit or Delete on each
+              item in the gallery section.</p>
+          </div>
+        </div>
+        <!-- RESULTS PANEL -->
+        <div class="admin-panel" id="ap-results-admin">
+          <h2>Upload Results</h2>
+          <div class="admin-card">
+            <h4 style="font-size:15px;font-weight:600;color:var(--navy);margin-bottom:16px;">📤 Upload Result Sheet</h4>
+            <div class="form-row">
+              <div class="form-group"><label>Exam Name *</label><input type="text" placeholder="e.g. Annual Exam 2026">
+              </div>
+              <div class="form-group"><label>Class *</label><select>
+                  <option>Class 1</option>
+                  <option>Class 2</option>
+                  <option>Class 3</option>
+                  <option>Class 4</option>
+                  <option>Class 5</option>
+                  <option>Class 6</option>
+                  <option>Class 7</option>
+                  <option>Class 8</option>
+                  <option>Class 9</option>
+                  <option selected>Class 10</option>
+                </select></div>
+            </div>
+            <div class="form-group"><label>Exam Date</label><input type="date"></div>
+            <div class="upload-zone" onclick="simulateUpload()">
+              <div class="uz-icon">📊</div>
+              <p>Upload Excel / CSV result sheet</p>
+              <span>XLSX, CSV format accepted</span>
+            </div>
+            <button class="btn-primary" onclick="showToast('Results uploaded & published successfully! ✓')"
+              style="margin-top:16px;min-width:200px;justify-content:center;">Upload & Publish Results</button>
+          </div>
+          <div class="admin-card">
+            <h4 style="font-size:15px;font-weight:600;color:var(--navy);margin-bottom:16px;">📋 Published Results</h4>
+            <table class="results-table">
+              <thead>
+                <tr>
+                  <th>Exam</th>
+                  <th>Class</th>
+                  <th>Published</th>
+                  <th>Students</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Annual Exam 2025</td>
+                  <td>Class 10</td>
+                  <td>15 Mar 2026</td>
+                  <td>62</td>
+                  <td><button class="btn-edit">Edit</button> <button class="btn-delete">Delete</button></td>
+                </tr>
+                <tr>
+                  <td>Half Yearly 2025</td>
+                  <td>Class 9</td>
+                  <td>28 Oct 2025</td>
+                  <td>58</td>
+                  <td><button class="btn-edit">Edit</button> <button class="btn-delete">Delete</button></td>
+                </tr>
+                <tr>
+                  <td>Unit Test 3</td>
+                  <td>Class 8</td>
+                  <td>12 Nov 2025</td>
+                  <td>55</td>
+                  <td><button class="btn-edit">Edit</button> <button class="btn-delete">Delete</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- FEES PANEL -->
+        <div class="admin-panel" id="ap-fees-admin">
+          <h2>Fee Management</h2>
+          <div class="admin-card">
+            <h4 style="font-size:15px;font-weight:600;color:var(--navy);margin-bottom:16px;">💰 Fee Collection Summary
+            </h4>
+            <div
+              style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin-bottom:20px;">
+              <div
+                style="background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);border-radius:10px;padding:18px;text-align:center;">
+                <div style="font-family:'Playfair Display',serif;font-size:26px;font-weight:900;color:var(--green);">
+                  ₹8.4L</div>
+                <div style="font-size:12px;color:var(--gray);margin-top:4px;">Collected This Month</div>
+              </div>
+              <div
+                style="background:rgba(249,115,22,0.08);border:1px solid rgba(249,115,22,0.2);border-radius:10px;padding:18px;text-align:center;">
+                <div style="font-family:'Playfair Display',serif;font-size:26px;font-weight:900;color:#ea580c;">₹1.2L
+                </div>
+                <div style="font-size:12px;color:var(--gray);margin-top:4px;">Pending Dues</div>
+              </div>
+              <div
+                style="background:var(--gold-pale);border:1px solid rgba(201,168,76,0.3);border-radius:10px;padding:18px;text-align:center;">
+                <div style="font-family:'Playfair Display',serif;font-size:26px;font-weight:900;color:var(--gold);">94%
+                </div>
+                <div style="font-size:12px;color:var(--gray);margin-top:4px;">Collection Rate</div>
+              </div>
+              <div
+                style="background:rgba(37,99,235,0.08);border:1px solid rgba(37,99,235,0.2);border-radius:10px;padding:18px;text-align:center;">
+                <div style="font-family:'Playfair Display',serif;font-size:26px;font-weight:900;color:var(--blue);">248
+                </div>
+                <div style="font-size:12px;color:var(--gray);margin-top:4px;">Transactions (Mar)</div>
+              </div>
+            </div>
+            <button class="btn-primary" onclick="showToast('Fee report exported as Excel!')"
+              style="min-width:200px;justify-content:center;">📥 Export Fee Report</button>
+          </div>
+        </div>
+        <!-- STATS PANEL -->
+        <div class="admin-panel" id="ap-stats">
+          <h2>School Statistics</h2>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;">
+            <div class="admin-card" style="text-align:center;padding:28px 20px;">
+              <div style="font-size:36px;margin-bottom:8px;">👩‍🎓</div>
+              <div style="font-family:'Playfair Display',serif;font-size:36px;font-weight:900;color:var(--navy);">1,842
+              </div>
+              <div style="font-size:13px;color:var(--gray);">Total Students</div>
+            </div>
+            <div class="admin-card" style="text-align:center;padding:28px 20px;">
+              <div style="font-size:36px;margin-bottom:8px;">👩‍🏫</div>
+              <div style="font-family:'Playfair Display',serif;font-size:36px;font-weight:900;color:var(--navy);">124
+              </div>
+              <div style="font-size:13px;color:var(--gray);">Teaching Staff</div>
+            </div>
+            <div class="admin-card" style="text-align:center;padding:28px 20px;">
+              <div style="font-size:36px;margin-bottom:8px;">📝</div>
+              <div style="font-family:'Playfair Display',serif;font-size:36px;font-weight:900;color:var(--green);">97%
+              </div>
+              <div style="font-size:13px;color:var(--gray);">Pass Rate 2025</div>
+            </div>
+            <div class="admin-card" style="text-align:center;padding:28px 20px;">
+              <div style="font-size:36px;margin-bottom:8px;">⭐</div>
+              <div style="font-family:'Playfair Display',serif;font-size:36px;font-weight:900;color:var(--gold);">4.8
+              </div>
+              <div style="font-size:13px;color:var(--gray);">Avg. Parent Rating</div>
+            </div>
+            <div class="admin-card" style="text-align:center;padding:28px 20px;">
+              <div style="font-size:36px;margin-bottom:8px;">📋</div>
+              <div style="font-family:'Playfair Display',serif;font-size:36px;font-weight:900;color:var(--navy);">156
+              </div>
+              <div style="font-size:13px;color:var(--gray);">Admission Enquiries</div>
+            </div>
+            <div class="admin-card" style="text-align:center;padding:28px 20px;">
+              <div style="font-size:36px;margin-bottom:8px;">🏆</div>
+              <div style="font-family:'Playfair Display',serif;font-size:36px;font-weight:900;color:var(--navy);">48
+              </div>
+              <div style="font-size:13px;color:var(--gray);">Awards This Year</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <!-- PAGE: PARENT / STUDENT PORTAL                              -->
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <div class="page" id="page-portal">
+    <div class="portal-login">
+      <div class="portal-box">
+        <div class="pb-logo">
+          <div class="logo-shield"><span class="logo-initials">CP</span></div>
+          <div class="logo-text-wrap"><span class="logo-name">Children Paradise</span></div>
+        </div>
+        <h2>Welcome Back</h2>
+        <p class="sub">Login to access results, fee history & more</p>
+        <div class="portal-tabs-mini">
+          <button class="portal-tab-mini active" onclick="switchPortalTab('parent',this)">Parent</button>
+          <button class="portal-tab-mini" onclick="switchPortalTab('student',this)">Student</button>
+          <button class="portal-tab-mini" onclick="switchPortalTab('teacher',this)">Teacher</button>
+        </div>
+        <form id="portalForm" onsubmit="portalLogin(event)">
+          <div class="form-group"><label id="portal-id-label">Parent Mobile / Email</label><input type="text"
+              id="portal-id" placeholder="Mobile number or email"></div>
+          <div class="form-group" style="position:relative;"><label>Password</label><input type="password"
+              id="portal-pass" placeholder="Enter password"><button type="button"
+              style="position:absolute;right:12px;top:34px;background:none;border:none;color:var(--gray);cursor:pointer;"
+              onclick="togglePass()">👁</button></div>
+          <button type="submit" class="btn-primary" style="width:100%;justify-content:center;margin-top:6px;">Login
+            Securely 🔐</button>
+        </form>
+        <p style="text-align:center;margin-top:16px;font-size:13px;color:var(--gray);">Forgot password? <a href="#"
+            style="color:var(--navy);font-weight:600;" onclick="showToast('OTP sent to registered mobile!')">Reset via
+            OTP</a></p>
+        <hr style="border:none;border-top:1px solid var(--light);margin:18px 0;">
+        <p style="text-align:center;font-size:13px;color:var(--gray);">Not registered yet? <a href="#"
+            onclick="showPage('home');navTo('admissions');return false;"
+            style="color:var(--navy);font-weight:600;">Apply for Admission</a></p>
+        <button onclick="showPage('home')"
+          style="display:block;width:100%;margin-top:14px;background:none;border:1px solid rgba(11,31,58,0.12);color:var(--gray);border-radius:8px;padding:10px;font-size:13px;cursor:pointer;">←
+          Back to Home</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── RECEIPT MODAL ───────────────────────────────────────── -->
+  <div class="modal-overlay" id="receiptModal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal('receiptModal')">✕</button>
+      <h3>Fee Receipt 🧾</h3>
+      <div class="receipt">
+        <div class="receipt-header">
+          <h4>Children Paradise School</h4>
+          <p>14 Paradise Lane, Sector 7, New Delhi – 110002</p>
+          <p style="font-size:11px;margin-top:4px;">CBSE Affiliated · Estd. 1995</p>
+        </div>
+        <div class="receipt-row"><span>Receipt No.</span><span id="rc-no">CPS-2026-03-0042</span></div>
+        <div class="receipt-row"><span>Student Name</span><span id="rc-student">Aarav Sharma</span></div>
+        <div class="receipt-row"><span>Class</span><span id="rc-class">Class 9-B</span></div>
+        <div class="receipt-row"><span>Quarter</span><span id="rc-quarter">Q3 (Oct – Dec 2025)</span></div>
+        <div class="receipt-row"><span>Transaction ID</span><span id="rc-txn">TXN9834761023</span></div>
+        <div class="receipt-row"><span>Date</span><span id="rc-date">24 Mar 2026</span></div>
+        <div class="receipt-row total"><span>Total Paid</span><span id="rc-amount">₹16,300</span></div>
+        <div class="receipt-status"><span>✓ Payment Successful</span></div>
+      </div>
+      <button class="btn-primary" onclick="showToast('Receipt downloaded as PDF!');closeModal('receiptModal')"
+        style="width:100%;justify-content:center;margin-top:16px;">📄 Download PDF Receipt</button>
+    </div>
+  </div>
+
+  <!-- ── PAYMENT SUCCESS MODAL ───────────────────────────────── -->
+  <div class="modal-overlay" id="paySuccessModal">
+    <div class="modal-box" style="text-align:center;">
+      <button class="modal-close" onclick="closeModal('paySuccessModal')">✕</button>
+      <div style="font-size:64px;margin-bottom:16px;">✅</div>
+      <h3>Payment Successful!</h3>
+      <p style="font-size:14px;color:var(--gray);margin-top:8px;margin-bottom:20px;">₹16,300 has been received.
+        Transaction ID: <strong>TXN9834761023</strong></p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;">
+        <button class="btn-primary" onclick="closeModal('paySuccessModal');openModal('receiptModal')">View
+          Receipt</button>
+        <button class="btn-outline" onclick="closeModal('paySuccessModal')"
+          style="color:var(--navy);border-color:rgba(11,31,58,0.2);">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── TOAST ───────────────────────────────────────────────── -->
+  <div id="toast"></div>
+
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <!-- JAVASCRIPT                                                 -->
+  <!-- ══════════════════════════════════════════════════════════ -->
+  <script src="script.js"></script>
+</body>
+
+</html>
